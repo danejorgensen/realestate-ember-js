@@ -1,0 +1,25 @@
+<div class="main">
+  <div class="tools">
+    {{#link-to "properties.new" class="button blue create-btn"}}
+      Add property
+    {{/link-to}}
+
+    <div class="properties-count">Properties: {{propertiesCount}}</div>
+  </div>
+
+  <ul class="properties-listing">
+    {{#each property in controller}}
+      <li>
+        {{#link-to "property" property class="fadein"}}
+          {{property.name}}
+        {{/link-to}}
+      </li>
+    {{else}}
+      <li class="no-properties-yet">No properties!</li>
+    {{/each}}
+  </ul>
+
+  <div class="property-pane">
+    {{outlet}}
+  </div>
+</div>

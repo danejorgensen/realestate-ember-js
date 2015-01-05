@@ -1,0 +1,41 @@
+{{#view Draggable}}
+  <div {{bindAttr class=":property-profile :pane editMode:scaleout:flipin"}}>
+    <div class="tools aright">
+      {{#link-to "properties" }}<button>Close</button>{{/link-to}}
+      <button {{bindAttr class=":blue :fleft :btn-mobile"}} {{action "closePropertyWithTransition" target="view"}}>Delete</button>
+      <button {{bindAttr class=":red deleteMode:active"}} {{action "delete"}} title="delete">Delete</button>
+      {{#link-to "property.edit" }}<button {{bindAttr class="editMode:active"}} title="edit">Edit</button>{{/link-to}}
+    </div>
+
+    {{confirm-box action="confirmDelete" param=property isVisible=deleteMode}}
+
+    <h2>{{name}}</h2>
+
+    <div class="line margin-top-20">
+      <label for="slug"><strong>Slug</strong></label>
+      {{slug}}
+    </div>
+    <div class="line margin-top">
+      <label for="amount"><strong>Amount</strong></label>
+      {{amount}}
+    </div>
+    <div class="line margin-top">
+      <label for="bathrooms"><strong>Bathrooms</strong></label>
+      {{bathrooms}}
+    </div>
+    <div class="line margin-top">
+      <label for="bedrooms"><strong>Bedrooms</strong></label>
+      {{bedrooms}}
+    </div>
+    <div class="line margin-top">
+      <label for="sqft"><strong>Sq Ft</strong></label>
+      {{sqft}}
+    </div>
+    <div class="line margin-top">
+      <label for="createdAt"><strong>Created At</strong></label>
+      {{format-date createdAt}}
+    </div>
+  </div>
+{{/view}}
+
+{{outlet}}

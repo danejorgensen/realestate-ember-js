@@ -1,0 +1,35 @@
+{{#view Draggable}}
+  <div {{bindAttr class=":property-edit :pane controllers.property.editMode:shown:hidden"}}>
+    <div class="tools">
+      <button class="icon-arrow-left blue fleft btn-mobile" {{action "closePropertyWithTransition" target="view"}}></button>
+    </div>
+
+    <div class="line">
+      <h3>{{actionName}} property</h3>
+    </div>
+    <div class="line">
+      <label for="name">Name</label>
+      {{input value=name}}
+    </div>
+    <div class="line">
+      <label for="slug">Slug</label>
+      {{input value=slug}}
+    </div>
+    <div class="line">
+      <label for="amount">Amount</label>
+      {{input value=amount}}
+    </div>
+    <div class="line">
+      <label for="bathrooms">Bathrooms</label>
+      {{input value=bathrooms}}
+    </div>
+    <div class="line">
+      <label for="bedrooms">Bedrooms</label>
+      {{input value=bedrooms}}
+    </div>
+    <div class="aright">
+      <button class="blue btn-desktop" {{action "save"}} title="save"> ok </button>
+      <button class="blue btn-mobile" {{action "saveWithTransition" target="view"}} title="save"> ok </button>
+    </div>
+  </div>
+{{/view}}
