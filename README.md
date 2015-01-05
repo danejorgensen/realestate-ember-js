@@ -28,4 +28,5 @@ Uses Rails 4.X as API/Backend, Ember-Data and SCSS
 
 ## Further Reading / Useful Links
 
+* Used with this [Rails API Example](https://github.com/danejorgensen/realestate-rails)
 * Modified from [Smashing Magazine](http://www.smashingmagazine.com/2013/11/07/an-in-depth-introduction-to-ember-js/)
