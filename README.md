@@ -1,8 +1,6 @@
-# RealEstate Ember.js (CLI) Front End
+# RealEstate Ember.js (CLI) Example
 
-Ember-cli 0.1.4
-Node 0.10.33
-NPM 2.1.10
+Ember-cli 0.1.4, Node 0.10.33, NPM 2.1.10
 
 Uses Rails 4.X as API/Backend, Ember-Data and SCSS
 
